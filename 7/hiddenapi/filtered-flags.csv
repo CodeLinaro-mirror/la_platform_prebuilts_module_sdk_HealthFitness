@@ -79,10 +79,12 @@ Landroid/health/connect/HealthConnectManager$17$$ExternalSyntheticLambda1;->run(
 Landroid/health/connect/HealthConnectManager$18$$ExternalSyntheticLambda0;->run()V,core-platform-api,public-api,sdk,system-api,test-api
 Landroid/health/connect/HealthConnectManager$18$$ExternalSyntheticLambda1;->run()V,core-platform-api,public-api,sdk,system-api,test-api
 Landroid/health/connect/HealthConnectManager$19$$ExternalSyntheticLambda0;->run()V,core-platform-api,public-api,sdk,system-api,test-api
+Landroid/health/connect/HealthConnectManager$19$$ExternalSyntheticLambda1;->run()V,core-platform-api,public-api,sdk,system-api,test-api
 Landroid/health/connect/HealthConnectManager$2$$ExternalSyntheticLambda0;->run()V,core-platform-api,public-api,sdk,system-api,test-api
 Landroid/health/connect/HealthConnectManager$20$$ExternalSyntheticLambda0;->run()V,core-platform-api,public-api,sdk,system-api,test-api
 Landroid/health/connect/HealthConnectManager$21$$ExternalSyntheticLambda0;->run()V,core-platform-api,public-api,sdk,system-api,test-api
-Landroid/health/connect/HealthConnectManager$21$$ExternalSyntheticLambda1;->run()V,core-platform-api,public-api,sdk,system-api,test-api
+Landroid/health/connect/HealthConnectManager$22$$ExternalSyntheticLambda0;->run()V,core-platform-api,public-api,sdk,system-api,test-api
+Landroid/health/connect/HealthConnectManager$22$$ExternalSyntheticLambda1;->run()V,core-platform-api,public-api,sdk,system-api,test-api
 Landroid/health/connect/HealthConnectManager$3$$ExternalSyntheticLambda0;->run()V,core-platform-api,public-api,sdk,system-api,test-api
 Landroid/health/connect/HealthConnectManager$4$$ExternalSyntheticLambda0;->run()V,core-platform-api,public-api,sdk,system-api,test-api
 Landroid/health/connect/HealthConnectManager$5$$ExternalSyntheticLambda0;->run()V,core-platform-api,public-api,sdk,system-api,test-api
@@ -394,6 +396,10 @@ Landroid/health/connect/aidl/IGetHealthConnectDataStateCallback$Default;->asBind
 Landroid/health/connect/aidl/IGetHealthConnectDataStateCallback$Stub$Proxy;->asBinder()Landroid/os/IBinder;,public-api,sdk,system-api,test-api
 Landroid/health/connect/aidl/IGetHealthConnectDataStateCallback$Stub;->asBinder()Landroid/os/IBinder;,public-api,sdk,system-api,test-api
 Landroid/health/connect/aidl/IGetHealthConnectDataStateCallback$Stub;->onTransact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z,public-api,sdk,system-api,test-api
+Landroid/health/connect/aidl/IGetHealthConnectMigrationUiStateCallback$Default;->asBinder()Landroid/os/IBinder;,public-api,sdk,system-api,test-api
+Landroid/health/connect/aidl/IGetHealthConnectMigrationUiStateCallback$Stub$Proxy;->asBinder()Landroid/os/IBinder;,public-api,sdk,system-api,test-api
+Landroid/health/connect/aidl/IGetHealthConnectMigrationUiStateCallback$Stub;->asBinder()Landroid/os/IBinder;,public-api,sdk,system-api,test-api
+Landroid/health/connect/aidl/IGetHealthConnectMigrationUiStateCallback$Stub;->onTransact(ILandroid/os/Parcel;Landroid/os/Parcel;I)Z,public-api,sdk,system-api,test-api
 Landroid/health/connect/aidl/IGetPriorityResponseCallback$Default;->asBinder()Landroid/os/IBinder;,public-api,sdk,system-api,test-api
 Landroid/health/connect/aidl/IGetPriorityResponseCallback$Stub$Proxy;->asBinder()Landroid/os/IBinder;,public-api,sdk,system-api,test-api
 Landroid/health/connect/aidl/IGetPriorityResponseCallback$Stub;->asBinder()Landroid/os/IBinder;,public-api,sdk,system-api,test-api
@@ -1474,6 +1480,10 @@ Landroid/health/connect/migration/AppInfoMigrationPayload;->getAppIcon()[B,sdk,s
 Landroid/health/connect/migration/AppInfoMigrationPayload;->getAppName()Ljava/lang/String;,sdk,system-api,test-api
 Landroid/health/connect/migration/AppInfoMigrationPayload;->getPackageName()Ljava/lang/String;,sdk,system-api,test-api
 Landroid/health/connect/migration/AppInfoMigrationPayload;->writeToParcel(Landroid/os/Parcel;I)V,public-api,sdk,system-api,test-api
+Landroid/health/connect/migration/HealthConnectMigrationUiState$1;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;,public-api,sdk,system-api,test-api
+Landroid/health/connect/migration/HealthConnectMigrationUiState$1;->newArray(I)[Ljava/lang/Object;,public-api,sdk,system-api,test-api
+Landroid/health/connect/migration/HealthConnectMigrationUiState;->describeContents()I,public-api,sdk,system-api,test-api
+Landroid/health/connect/migration/HealthConnectMigrationUiState;->writeToParcel(Landroid/os/Parcel;I)V,public-api,sdk,system-api,test-api
 Landroid/health/connect/migration/MetadataMigrationPayload$1;->createFromParcel(Landroid/os/Parcel;)Ljava/lang/Object;,public-api,sdk,system-api,test-api
 Landroid/health/connect/migration/MetadataMigrationPayload$1;->newArray(I)[Ljava/lang/Object;,public-api,sdk,system-api,test-api
 Landroid/health/connect/migration/MetadataMigrationPayload$Builder;-><init>()V,sdk,system-api,test-api

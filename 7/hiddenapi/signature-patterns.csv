@@ -46,6 +46,7 @@ android/health/connect/aidl/IDataStagingFinishedCallback
 android/health/connect/aidl/IEmptyResponseCallback
 android/health/connect/aidl/IGetChangeLogTokenCallback
 android/health/connect/aidl/IGetHealthConnectDataStateCallback
+android/health/connect/aidl/IGetHealthConnectMigrationUiStateCallback
 android/health/connect/aidl/IGetPriorityResponseCallback
 android/health/connect/aidl/IHealthConnectService
 android/health/connect/aidl/IInsertRecordsResponseCallback
@@ -188,6 +189,7 @@ android/health/connect/internal/datatypes/utils/RecordMapper
 android/health/connect/internal/datatypes/utils/RecordTypePermissionCategoryMapper
 android/health/connect/internal/datatypes/utils/RecordTypeRecordCategoryMapper
 android/health/connect/migration/AppInfoMigrationPayload
+android/health/connect/migration/HealthConnectMigrationUiState
 android/health/connect/migration/MetadataMigrationPayload
 android/health/connect/migration/MigrationEntity
 android/health/connect/migration/MigrationEntityParcel
