@@ -1,8 +1,24 @@
 drops {
   android_build_drop {
+<<<<<<< HEAD
+<<<<<<< HEAD
     build_id: "T1007089"
     target: "train_build"
     source_file: "mainline-sdks/for-UpsideDownCake-build/current/com.google.android.healthfitness/sdk/healthfitness-module-sdk-current.zip"
+||||||| a5b32d6
+    build_id: "9388295"
+    target: "mainline_modules_sdks-userdebug"
+    source_file: "mainline-sdks/for-latest-build/current/com.google.android.healthconnect/sdk/healthconnect-module-sdk-current.zip"
+=======
+    build_id: "T1007284"
+||||||| 17e851d
+    build_id: "T1007284"
+=======
+    build_id: "T1007458"
+>>>>>>> 30542e0edd8e5436595866c332a1c55ba39f843f
+    target: "train_build"
+    source_file: "mainline-sdks/for-UpsideDownCake-build/current/com.google.android.healthfitness/sdk/healthfitness-module-sdk-current.zip"
+>>>>>>> a331dc1ec4b50a034385d89549e11d5f12c35ae3
   }
   dest_file: "current/current.zip"
   version: ""
