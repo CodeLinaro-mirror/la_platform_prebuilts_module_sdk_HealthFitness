@@ -53,6 +53,7 @@ android/health/connect/aidl/IAccessLogsResponseCallback
 android/health/connect/aidl/IActivityDatesResponseCallback
 android/health/connect/aidl/IAggregateRecordsResponseCallback
 android/health/connect/aidl/IApplicationInfoResponseCallback
+android/health/connect/aidl/ICanRestoreResponseCallback
 android/health/connect/aidl/IChangeLogsResponseCallback
 android/health/connect/aidl/IDataStagingFinishedCallback
 android/health/connect/aidl/IEmptyResponseCallback

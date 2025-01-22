@@ -43,9 +43,9 @@ signature
 |Lcom/android/healthfitness/flags/CustomFeatureFlags;->phrReadMedicalResourcesFixQueryLimit()Z|
 |Lcom/android/healthfitness/flags/CustomFeatureFlags;->phrUpsertFixParcelSizeCalculation()Z|
 |Lcom/android/healthfitness/flags/CustomFeatureFlags;->phrUpsertFixUseSharedMemory()Z|
-|Lcom/android/healthfitness/flags/CustomFeatureFlags;->readAssetsForDisabledAppsFromPackageManager()Z|
 |Lcom/android/healthfitness/flags/CustomFeatureFlags;->refactorAggregations()Z|
 |Lcom/android/healthfitness/flags/CustomFeatureFlags;->replaceBodySensorPermissionEnabled()Z|
+|Lcom/android/healthfitness/flags/CustomFeatureFlags;->smoking()Z|
 |Lcom/android/healthfitness/flags/FeatureFlags;->activityIntensity()Z|
 |Lcom/android/healthfitness/flags/FeatureFlags;->activityIntensityDb()Z|
 |Lcom/android/healthfitness/flags/FeatureFlags;->addMissingAccessLogs()Z|
@@ -90,9 +90,9 @@ signature
 |Lcom/android/healthfitness/flags/FeatureFlags;->phrReadMedicalResourcesFixQueryLimit()Z|
 |Lcom/android/healthfitness/flags/FeatureFlags;->phrUpsertFixParcelSizeCalculation()Z|
 |Lcom/android/healthfitness/flags/FeatureFlags;->phrUpsertFixUseSharedMemory()Z|
-|Lcom/android/healthfitness/flags/FeatureFlags;->readAssetsForDisabledAppsFromPackageManager()Z|
 |Lcom/android/healthfitness/flags/FeatureFlags;->refactorAggregations()Z|
 |Lcom/android/healthfitness/flags/FeatureFlags;->replaceBodySensorPermissionEnabled()Z|
+|Lcom/android/healthfitness/flags/FeatureFlags;->smoking()Z|
 |Lcom/android/healthfitness/flags/FeatureFlagsImpl;->activityIntensity()Z|
 |Lcom/android/healthfitness/flags/FeatureFlagsImpl;->activityIntensityDb()Z|
 |Lcom/android/healthfitness/flags/FeatureFlagsImpl;->addMissingAccessLogs()Z|
@@ -137,9 +137,9 @@ signature
 |Lcom/android/healthfitness/flags/FeatureFlagsImpl;->phrReadMedicalResourcesFixQueryLimit()Z|
 |Lcom/android/healthfitness/flags/FeatureFlagsImpl;->phrUpsertFixParcelSizeCalculation()Z|
 |Lcom/android/healthfitness/flags/FeatureFlagsImpl;->phrUpsertFixUseSharedMemory()Z|
-|Lcom/android/healthfitness/flags/FeatureFlagsImpl;->readAssetsForDisabledAppsFromPackageManager()Z|
 |Lcom/android/healthfitness/flags/FeatureFlagsImpl;->refactorAggregations()Z|
 |Lcom/android/healthfitness/flags/FeatureFlagsImpl;->replaceBodySensorPermissionEnabled()Z|
+|Lcom/android/healthfitness/flags/FeatureFlagsImpl;->smoking()Z|
 |Lcom/android/healthfitness/flags/Flags;->activityIntensity()Z|
 |Lcom/android/healthfitness/flags/Flags;->activityIntensityDb()Z|
 |Lcom/android/healthfitness/flags/Flags;->addMissingAccessLogs()Z|
@@ -184,6 +184,6 @@ signature
 |Lcom/android/healthfitness/flags/Flags;->phrReadMedicalResourcesFixQueryLimit()Z|
 |Lcom/android/healthfitness/flags/Flags;->phrUpsertFixParcelSizeCalculation()Z|
 |Lcom/android/healthfitness/flags/Flags;->phrUpsertFixUseSharedMemory()Z|
-|Lcom/android/healthfitness/flags/Flags;->readAssetsForDisabledAppsFromPackageManager()Z|
 |Lcom/android/healthfitness/flags/Flags;->refactorAggregations()Z|
 |Lcom/android/healthfitness/flags/Flags;->replaceBodySensorPermissionEnabled()Z|
+|Lcom/android/healthfitness/flags/Flags;->smoking()Z|
