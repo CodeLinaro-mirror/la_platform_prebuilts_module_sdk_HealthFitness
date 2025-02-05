@@ -12,6 +12,7 @@ signature
 |Lcom/android/healthfitness/flags/CustomFeatureFlags;->developmentDatabase()Z|
 |Lcom/android/healthfitness/flags/CustomFeatureFlags;->ecosystemMetrics()Z|
 |Lcom/android/healthfitness/flags/CustomFeatureFlags;->ecosystemMetricsDbChanges()Z|
+|Lcom/android/healthfitness/flags/CustomFeatureFlags;->entriesPagination()Z|
 |Lcom/android/healthfitness/flags/CustomFeatureFlags;->exportImport()Z|
 |Lcom/android/healthfitness/flags/CustomFeatureFlags;->exportImportFastFollow()Z|
 |Lcom/android/healthfitness/flags/CustomFeatureFlags;->exportImportNiceToHave()Z|
@@ -30,6 +31,7 @@ signature
 |Lcom/android/healthfitness/flags/CustomFeatureFlags;->personalHealthRecordDisableD2d()Z|
 |Lcom/android/healthfitness/flags/CustomFeatureFlags;->personalHealthRecordDisableExportImport()Z|
 |Lcom/android/healthfitness/flags/CustomFeatureFlags;->personalHealthRecordEnableD2dAndExportImport()Z|
+|Lcom/android/healthfitness/flags/CustomFeatureFlags;->personalHealthRecordEnableExportImport()Z|
 |Lcom/android/healthfitness/flags/CustomFeatureFlags;->personalHealthRecordEntriesScreen()Z|
 |Lcom/android/healthfitness/flags/CustomFeatureFlags;->personalHealthRecordLockScreenBanner()Z|
 |Lcom/android/healthfitness/flags/CustomFeatureFlags;->personalHealthRecordTelemetry()Z|
@@ -45,6 +47,7 @@ signature
 |Lcom/android/healthfitness/flags/CustomFeatureFlags;->phrUpsertFixUseSharedMemory()Z|
 |Lcom/android/healthfitness/flags/CustomFeatureFlags;->refactorAggregations()Z|
 |Lcom/android/healthfitness/flags/CustomFeatureFlags;->replaceBodySensorPermissionEnabled()Z|
+|Lcom/android/healthfitness/flags/CustomFeatureFlags;->singleUserPermissionIntentTracker()Z|
 |Lcom/android/healthfitness/flags/CustomFeatureFlags;->smoking()Z|
 |Lcom/android/healthfitness/flags/FeatureFlags;->activityIntensity()Z|
 |Lcom/android/healthfitness/flags/FeatureFlags;->activityIntensityDb()Z|
@@ -59,6 +62,7 @@ signature
 |Lcom/android/healthfitness/flags/FeatureFlags;->developmentDatabase()Z|
 |Lcom/android/healthfitness/flags/FeatureFlags;->ecosystemMetrics()Z|
 |Lcom/android/healthfitness/flags/FeatureFlags;->ecosystemMetricsDbChanges()Z|
+|Lcom/android/healthfitness/flags/FeatureFlags;->entriesPagination()Z|
 |Lcom/android/healthfitness/flags/FeatureFlags;->exportImport()Z|
 |Lcom/android/healthfitness/flags/FeatureFlags;->exportImportFastFollow()Z|
 |Lcom/android/healthfitness/flags/FeatureFlags;->exportImportNiceToHave()Z|
@@ -77,6 +81,7 @@ signature
 |Lcom/android/healthfitness/flags/FeatureFlags;->personalHealthRecordDisableD2d()Z|
 |Lcom/android/healthfitness/flags/FeatureFlags;->personalHealthRecordDisableExportImport()Z|
 |Lcom/android/healthfitness/flags/FeatureFlags;->personalHealthRecordEnableD2dAndExportImport()Z|
+|Lcom/android/healthfitness/flags/FeatureFlags;->personalHealthRecordEnableExportImport()Z|
 |Lcom/android/healthfitness/flags/FeatureFlags;->personalHealthRecordEntriesScreen()Z|
 |Lcom/android/healthfitness/flags/FeatureFlags;->personalHealthRecordLockScreenBanner()Z|
 |Lcom/android/healthfitness/flags/FeatureFlags;->personalHealthRecordTelemetry()Z|
@@ -92,6 +97,7 @@ signature
 |Lcom/android/healthfitness/flags/FeatureFlags;->phrUpsertFixUseSharedMemory()Z|
 |Lcom/android/healthfitness/flags/FeatureFlags;->refactorAggregations()Z|
 |Lcom/android/healthfitness/flags/FeatureFlags;->replaceBodySensorPermissionEnabled()Z|
+|Lcom/android/healthfitness/flags/FeatureFlags;->singleUserPermissionIntentTracker()Z|
 |Lcom/android/healthfitness/flags/FeatureFlags;->smoking()Z|
 |Lcom/android/healthfitness/flags/FeatureFlagsImpl;->activityIntensity()Z|
 |Lcom/android/healthfitness/flags/FeatureFlagsImpl;->activityIntensityDb()Z|
@@ -106,6 +112,7 @@ signature
 |Lcom/android/healthfitness/flags/FeatureFlagsImpl;->developmentDatabase()Z|
 |Lcom/android/healthfitness/flags/FeatureFlagsImpl;->ecosystemMetrics()Z|
 |Lcom/android/healthfitness/flags/FeatureFlagsImpl;->ecosystemMetricsDbChanges()Z|
+|Lcom/android/healthfitness/flags/FeatureFlagsImpl;->entriesPagination()Z|
 |Lcom/android/healthfitness/flags/FeatureFlagsImpl;->exportImport()Z|
 |Lcom/android/healthfitness/flags/FeatureFlagsImpl;->exportImportFastFollow()Z|
 |Lcom/android/healthfitness/flags/FeatureFlagsImpl;->exportImportNiceToHave()Z|
@@ -124,6 +131,7 @@ signature
 |Lcom/android/healthfitness/flags/FeatureFlagsImpl;->personalHealthRecordDisableD2d()Z|
 |Lcom/android/healthfitness/flags/FeatureFlagsImpl;->personalHealthRecordDisableExportImport()Z|
 |Lcom/android/healthfitness/flags/FeatureFlagsImpl;->personalHealthRecordEnableD2dAndExportImport()Z|
+|Lcom/android/healthfitness/flags/FeatureFlagsImpl;->personalHealthRecordEnableExportImport()Z|
 |Lcom/android/healthfitness/flags/FeatureFlagsImpl;->personalHealthRecordEntriesScreen()Z|
 |Lcom/android/healthfitness/flags/FeatureFlagsImpl;->personalHealthRecordLockScreenBanner()Z|
 |Lcom/android/healthfitness/flags/FeatureFlagsImpl;->personalHealthRecordTelemetry()Z|
@@ -139,6 +147,7 @@ signature
 |Lcom/android/healthfitness/flags/FeatureFlagsImpl;->phrUpsertFixUseSharedMemory()Z|
 |Lcom/android/healthfitness/flags/FeatureFlagsImpl;->refactorAggregations()Z|
 |Lcom/android/healthfitness/flags/FeatureFlagsImpl;->replaceBodySensorPermissionEnabled()Z|
+|Lcom/android/healthfitness/flags/FeatureFlagsImpl;->singleUserPermissionIntentTracker()Z|
 |Lcom/android/healthfitness/flags/FeatureFlagsImpl;->smoking()Z|
 |Lcom/android/healthfitness/flags/Flags;->activityIntensity()Z|
 |Lcom/android/healthfitness/flags/Flags;->activityIntensityDb()Z|
@@ -153,6 +162,7 @@ signature
 |Lcom/android/healthfitness/flags/Flags;->developmentDatabase()Z|
 |Lcom/android/healthfitness/flags/Flags;->ecosystemMetrics()Z|
 |Lcom/android/healthfitness/flags/Flags;->ecosystemMetricsDbChanges()Z|
+|Lcom/android/healthfitness/flags/Flags;->entriesPagination()Z|
 |Lcom/android/healthfitness/flags/Flags;->exportImport()Z|
 |Lcom/android/healthfitness/flags/Flags;->exportImportFastFollow()Z|
 |Lcom/android/healthfitness/flags/Flags;->exportImportNiceToHave()Z|
@@ -171,6 +181,7 @@ signature
 |Lcom/android/healthfitness/flags/Flags;->personalHealthRecordDisableD2d()Z|
 |Lcom/android/healthfitness/flags/Flags;->personalHealthRecordDisableExportImport()Z|
 |Lcom/android/healthfitness/flags/Flags;->personalHealthRecordEnableD2dAndExportImport()Z|
+|Lcom/android/healthfitness/flags/Flags;->personalHealthRecordEnableExportImport()Z|
 |Lcom/android/healthfitness/flags/Flags;->personalHealthRecordEntriesScreen()Z|
 |Lcom/android/healthfitness/flags/Flags;->personalHealthRecordLockScreenBanner()Z|
 |Lcom/android/healthfitness/flags/Flags;->personalHealthRecordTelemetry()Z|
@@ -186,4 +197,5 @@ signature
 |Lcom/android/healthfitness/flags/Flags;->phrUpsertFixUseSharedMemory()Z|
 |Lcom/android/healthfitness/flags/Flags;->refactorAggregations()Z|
 |Lcom/android/healthfitness/flags/Flags;->replaceBodySensorPermissionEnabled()Z|
+|Lcom/android/healthfitness/flags/Flags;->singleUserPermissionIntentTracker()Z|
 |Lcom/android/healthfitness/flags/Flags;->smoking()Z|
