@@ -55,7 +55,6 @@ android/health/connect/aidl/IEmptyResponseCallback
 android/health/connect/aidl/IGetChangeLogTokenCallback
 android/health/connect/aidl/IGetHealthConnectDataStateCallback
 android/health/connect/aidl/IGetHealthConnectMigrationUiStateCallback
-android/health/connect/aidl/IGetLatestMetadataForBackupResponseCallback
 android/health/connect/aidl/IGetPriorityResponseCallback
 android/health/connect/aidl/IHealthConnectService
 android/health/connect/aidl/IInsertRecordsResponseCallback
@@ -75,12 +74,6 @@ android/health/connect/aidl/RecordIdFiltersParcel
 android/health/connect/aidl/RecordTypeInfoResponseParcel
 android/health/connect/aidl/RecordsParcel
 android/health/connect/aidl/UpdatePriorityRequestParcel
-android/health/connect/aidl/UpsertMedicalResourceRequestsParcel
-android/health/connect/backuprestore/BackupChange
-android/health/connect/backuprestore/BackupMetadata
-android/health/connect/backuprestore/GetChangesForBackupResponse
-android/health/connect/backuprestore/GetLatestMetadataForBackupResponse
-android/health/connect/backuprestore/RestoreChange
 android/health/connect/changelog/ChangeLogTokenRequest
 android/health/connect/changelog/ChangeLogTokenResponse
 android/health/connect/changelog/ChangeLogsRequest
