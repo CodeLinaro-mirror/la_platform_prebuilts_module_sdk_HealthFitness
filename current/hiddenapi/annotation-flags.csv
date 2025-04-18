@@ -3,8 +3,7 @@ Lcom/android/healthfitness/flags/CustomFeatureFlags;->clearCachesAfterSwitchingU
 Lcom/android/healthfitness/flags/CustomFeatureFlags;->cloudBackupAndRestore()Z,unsupported
 Lcom/android/healthfitness/flags/CustomFeatureFlags;->cloudBackupAndRestoreDb()Z,unsupported
 Lcom/android/healthfitness/flags/CustomFeatureFlags;->cyclePhases()Z,unsupported
-Lcom/android/healthfitness/flags/CustomFeatureFlags;->d2dFileDeletionBugFix()Z,unsupported
-Lcom/android/healthfitness/flags/CustomFeatureFlags;->dependencyInjection()Z,unsupported
+Lcom/android/healthfitness/flags/CustomFeatureFlags;->deprecateExerciseSessionTypeBreathing()Z,unsupported
 Lcom/android/healthfitness/flags/CustomFeatureFlags;->developmentDatabase()Z,unsupported
 Lcom/android/healthfitness/flags/CustomFeatureFlags;->ecosystemMetrics()Z,unsupported
 Lcom/android/healthfitness/flags/CustomFeatureFlags;->ecosystemMetricsDbChanges()Z,unsupported
@@ -57,8 +56,7 @@ Lcom/android/healthfitness/flags/FeatureFlags;->clearCachesAfterSwitchingUser()Z
 Lcom/android/healthfitness/flags/FeatureFlags;->cloudBackupAndRestore()Z,unsupported
 Lcom/android/healthfitness/flags/FeatureFlags;->cloudBackupAndRestoreDb()Z,unsupported
 Lcom/android/healthfitness/flags/FeatureFlags;->cyclePhases()Z,unsupported
-Lcom/android/healthfitness/flags/FeatureFlags;->d2dFileDeletionBugFix()Z,unsupported
-Lcom/android/healthfitness/flags/FeatureFlags;->dependencyInjection()Z,unsupported
+Lcom/android/healthfitness/flags/FeatureFlags;->deprecateExerciseSessionTypeBreathing()Z,unsupported
 Lcom/android/healthfitness/flags/FeatureFlags;->developmentDatabase()Z,unsupported
 Lcom/android/healthfitness/flags/FeatureFlags;->ecosystemMetrics()Z,unsupported
 Lcom/android/healthfitness/flags/FeatureFlags;->ecosystemMetricsDbChanges()Z,unsupported
@@ -111,8 +109,7 @@ Lcom/android/healthfitness/flags/FeatureFlagsImpl;->clearCachesAfterSwitchingUse
 Lcom/android/healthfitness/flags/FeatureFlagsImpl;->cloudBackupAndRestore()Z,unsupported
 Lcom/android/healthfitness/flags/FeatureFlagsImpl;->cloudBackupAndRestoreDb()Z,unsupported
 Lcom/android/healthfitness/flags/FeatureFlagsImpl;->cyclePhases()Z,unsupported
-Lcom/android/healthfitness/flags/FeatureFlagsImpl;->d2dFileDeletionBugFix()Z,unsupported
-Lcom/android/healthfitness/flags/FeatureFlagsImpl;->dependencyInjection()Z,unsupported
+Lcom/android/healthfitness/flags/FeatureFlagsImpl;->deprecateExerciseSessionTypeBreathing()Z,unsupported
 Lcom/android/healthfitness/flags/FeatureFlagsImpl;->developmentDatabase()Z,unsupported
 Lcom/android/healthfitness/flags/FeatureFlagsImpl;->ecosystemMetrics()Z,unsupported
 Lcom/android/healthfitness/flags/FeatureFlagsImpl;->ecosystemMetricsDbChanges()Z,unsupported
@@ -165,8 +162,7 @@ Lcom/android/healthfitness/flags/Flags;->clearCachesAfterSwitchingUser()Z,unsupp
 Lcom/android/healthfitness/flags/Flags;->cloudBackupAndRestore()Z,unsupported
 Lcom/android/healthfitness/flags/Flags;->cloudBackupAndRestoreDb()Z,unsupported
 Lcom/android/healthfitness/flags/Flags;->cyclePhases()Z,unsupported
-Lcom/android/healthfitness/flags/Flags;->d2dFileDeletionBugFix()Z,unsupported
-Lcom/android/healthfitness/flags/Flags;->dependencyInjection()Z,unsupported
+Lcom/android/healthfitness/flags/Flags;->deprecateExerciseSessionTypeBreathing()Z,unsupported
 Lcom/android/healthfitness/flags/Flags;->developmentDatabase()Z,unsupported
 Lcom/android/healthfitness/flags/Flags;->ecosystemMetrics()Z,unsupported
 Lcom/android/healthfitness/flags/Flags;->ecosystemMetricsDbChanges()Z,unsupported
