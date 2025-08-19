@@ -10,6 +10,8 @@ android/health/connect/CreateMedicalDataSourceRequest
 android/health/connect/DeleteMedicalResourcesRequest
 android/health/connect/DeleteUsingFiltersRequest
 android/health/connect/FetchDataOriginsPriorityOrderResponse
+android/health/connect/GetMatchingAppsRequest
+android/health/connect/GetMatchingAppsResponse
 android/health/connect/GetMedicalDataSourcesRequest
 android/health/connect/HealthApiVersion
 android/health/connect/HealthConnectDataState
@@ -55,6 +57,7 @@ android/health/connect/aidl/IAccessLogsResponseCallback
 android/health/connect/aidl/IActivityDatesResponseCallback
 android/health/connect/aidl/IAggregateRecordsResponseCallback
 android/health/connect/aidl/IApplicationInfoResponseCallback
+android/health/connect/aidl/ICanConnectMatchingAppsCallback
 android/health/connect/aidl/ICanRestoreResponseCallback
 android/health/connect/aidl/IChangeLogsResponseCallback
 android/health/connect/aidl/IDataStagingFinishedCallback
@@ -65,6 +68,7 @@ android/health/connect/aidl/IGetHealthConnectDataStateCallback
 android/health/connect/aidl/IGetHealthConnectMigrationUiStateCallback
 android/health/connect/aidl/IGetHealthConnectOnboardingStateCallback
 android/health/connect/aidl/IGetLatestMetadataForBackupResponseCallback
+android/health/connect/aidl/IGetMatchingAppsCallback
 android/health/connect/aidl/IGetPriorityResponseCallback
 android/health/connect/aidl/IHealthConnectService
 android/health/connect/aidl/IInsertRecordsResponseCallback
@@ -91,6 +95,9 @@ android/health/connect/backuprestore/BackupMetadata
 android/health/connect/backuprestore/GetChangesForBackupResponse
 android/health/connect/backuprestore/GetLatestMetadataForBackupResponse
 android/health/connect/backuprestore/RestoreChange
+android/health/connect/backuprestore/UpdateBackupAndRestoreSettingsRequest
+android/health/connect/backuprestore/UpdateHealthConnectBackupStatusRequest
+android/health/connect/backuprestore/UpdateHealthConnectRestoreStatusRequest
 android/health/connect/changelog/ChangeLogTokenRequest
 android/health/connect/changelog/ChangeLogTokenResponse
 android/health/connect/changelog/ChangeLogsRequest
