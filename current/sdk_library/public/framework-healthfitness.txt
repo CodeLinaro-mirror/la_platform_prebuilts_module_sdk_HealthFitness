@@ -103,7 +103,7 @@ package android.health.connect {
     field public static final int ERROR_UNSUPPORTED_OPERATION = 9; // 0x9
   }
 
-  public class HealthConnectManager {
+  @RestrictedForEnvironment(environments=android.annotation.RestrictedForEnvironment.ENVIRONMENT_SDK_RUNTIME, from=android.os.Build.VERSION_CODES.UPSIDE_DOWN_CAKE) public class HealthConnectManager {
     method public <T> void aggregate(@NonNull android.health.connect.AggregateRecordsRequest<T>, @NonNull java.util.concurrent.Executor, @NonNull android.os.OutcomeReceiver<android.health.connect.AggregateRecordsResponse<T>,android.health.connect.HealthConnectException>);
     method public <T> void aggregateGroupByDuration(@NonNull android.health.connect.AggregateRecordsRequest<T>, @NonNull java.time.Duration, @NonNull java.util.concurrent.Executor, @NonNull android.os.OutcomeReceiver<java.util.List<android.health.connect.AggregateRecordsGroupedByDurationResponse<T>>,android.health.connect.HealthConnectException>);
     method public <T> void aggregateGroupByPeriod(@NonNull android.health.connect.AggregateRecordsRequest<T>, @NonNull java.time.Period, @NonNull java.util.concurrent.Executor, @NonNull android.os.OutcomeReceiver<java.util.List<android.health.connect.AggregateRecordsGroupedByPeriodResponse<T>>,android.health.connect.HealthConnectException>);
@@ -125,6 +125,7 @@ package android.health.connect {
     method @RequiresPermission(android.health.connect.HealthPermissions.WRITE_MEDICAL_DATA) public void upsertMedicalResources(@NonNull java.util.List<android.health.connect.UpsertMedicalResourceRequest>, @NonNull java.util.concurrent.Executor, @NonNull android.os.OutcomeReceiver<java.util.List<android.health.connect.datatypes.MedicalResource>,android.health.connect.HealthConnectException>);
     field public static final String ACTION_MANAGE_HEALTH_PERMISSIONS = "android.health.connect.action.MANAGE_HEALTH_PERMISSIONS";
     field public static final String ACTION_REQUEST_EXERCISE_ROUTE = "android.health.connect.action.REQUEST_EXERCISE_ROUTE";
+    field public static final String ACTION_SHOW_ONBOARDING = "android.health.connect.action.SHOW_ONBOARDING";
     field public static final String CATEGORY_HEALTH_PERMISSIONS = "android.intent.category.HEALTH_PERMISSIONS";
     field public static final String EXTRA_EXERCISE_ROUTE = "android.health.connect.extra.EXERCISE_ROUTE";
     field public static final String EXTRA_SESSION_ID = "android.health.connect.extra.SESSION_ID";
@@ -185,6 +186,7 @@ package android.health.connect {
     field public static final String READ_VO2_MAX = "android.permission.health.READ_VO2_MAX";
     field public static final String READ_WEIGHT = "android.permission.health.READ_WEIGHT";
     field public static final String READ_WHEELCHAIR_PUSHES = "android.permission.health.READ_WHEELCHAIR_PUSHES";
+    field public static final String START_ONBOARDING = "android.permission.health.START_ONBOARDING";
     field public static final String WRITE_ACTIVE_CALORIES_BURNED = "android.permission.health.WRITE_ACTIVE_CALORIES_BURNED";
     field public static final String WRITE_ACTIVITY_INTENSITY = "android.permission.health.WRITE_ACTIVITY_INTENSITY";
     field public static final String WRITE_BASAL_BODY_TEMPERATURE = "android.permission.health.WRITE_BASAL_BODY_TEMPERATURE";
@@ -388,6 +390,7 @@ package android.health.connect.changelog {
   public final class ChangeLogTokenRequest implements android.os.Parcelable {
     method public int describeContents();
     method @NonNull public java.util.Set<android.health.connect.datatypes.DataOrigin> getDataOriginFilters();
+    method @NonNull public java.util.Set<java.lang.Integer> getMedicalResourceTypes();
     method @NonNull public java.util.Set<java.lang.Class<? extends android.health.connect.datatypes.Record>> getRecordTypes();
     method public void writeToParcel(@NonNull android.os.Parcel, int);
     field @NonNull public static final android.os.Parcelable.Creator<android.health.connect.changelog.ChangeLogTokenRequest> CREATOR;
@@ -396,6 +399,7 @@ package android.health.connect.changelog {
   public static final class ChangeLogTokenRequest.Builder {
     ctor public ChangeLogTokenRequest.Builder();
     method @NonNull public android.health.connect.changelog.ChangeLogTokenRequest.Builder addDataOriginFilter(@NonNull android.health.connect.datatypes.DataOrigin);
+    method @NonNull public android.health.connect.changelog.ChangeLogTokenRequest.Builder addMedicalResourceType(int);
     method @NonNull public android.health.connect.changelog.ChangeLogTokenRequest.Builder addRecordType(@NonNull Class<? extends android.health.connect.datatypes.Record>);
     method @NonNull public android.health.connect.changelog.ChangeLogTokenRequest build();
   }
@@ -424,7 +428,9 @@ package android.health.connect.changelog {
   public final class ChangeLogsResponse implements android.os.Parcelable {
     method public int describeContents();
     method @NonNull public java.util.List<android.health.connect.changelog.ChangeLogsResponse.DeletedLog> getDeletedLogs();
+    method @NonNull public java.util.List<android.health.connect.changelog.ChangeLogsResponse.DeletedMedicalResource> getDeletedMedicalResources();
     method @NonNull public String getNextChangesToken();
+    method @NonNull public java.util.List<android.health.connect.datatypes.MedicalResource> getUpsertedMedicalResources();
     method @NonNull public java.util.List<android.health.connect.datatypes.Record> getUpsertedRecords();
     method public boolean hasMorePages();
     method public void writeToParcel(@NonNull android.os.Parcel, int);
@@ -432,8 +438,16 @@ package android.health.connect.changelog {
   }
 
   public static final class ChangeLogsResponse.DeletedLog {
-    ctor public ChangeLogsResponse.DeletedLog(@NonNull String, long);
+    ctor @Deprecated public ChangeLogsResponse.DeletedLog(@NonNull String, long);
+    ctor public ChangeLogsResponse.DeletedLog(@NonNull String, @NonNull java.time.Instant);
     method @NonNull public String getDeletedRecordId();
+    method @NonNull public java.time.Instant getDeletedTime();
+  }
+
+  public static final class ChangeLogsResponse.DeletedMedicalResource {
+    ctor public ChangeLogsResponse.DeletedMedicalResource(@NonNull android.health.connect.MedicalResourceId, @NonNull java.time.Instant);
+    method @NonNull public String getDataSourceId();
+    method @NonNull public android.health.connect.MedicalResourceId getDeletedMedicalResourceId();
     method @NonNull public java.time.Instant getDeletedTime();
   }
 
@@ -698,9 +712,16 @@ package android.health.connect.datatypes {
     method @Nullable public String getModel();
     method public int getType();
     field public static final int DEVICE_TYPE_CHEST_STRAP = 7; // 0x7
+    field public static final int DEVICE_TYPE_CONSUMER_MEDICAL_DEVICE = 9; // 0x9
     field public static final int DEVICE_TYPE_FITNESS_BAND = 6; // 0x6
+    field public static final int DEVICE_TYPE_FITNESS_EQUIPMENT = 13; // 0xd
+    field public static final int DEVICE_TYPE_FITNESS_MACHINE = 12; // 0xc
+    field public static final int DEVICE_TYPE_GLASSES = 10; // 0xa
     field public static final int DEVICE_TYPE_HEAD_MOUNTED = 5; // 0x5
+    field public static final int DEVICE_TYPE_HEARABLE = 11; // 0xb
+    field public static final int DEVICE_TYPE_METER = 15; // 0xf
     field public static final int DEVICE_TYPE_PHONE = 2; // 0x2
+    field public static final int DEVICE_TYPE_PORTABLE_COMPUTER = 14; // 0xe
     field public static final int DEVICE_TYPE_RING = 4; // 0x4
     field public static final int DEVICE_TYPE_SCALE = 3; // 0x3
     field public static final int DEVICE_TYPE_SMART_DISPLAY = 8; // 0x8
@@ -878,15 +899,26 @@ package android.health.connect.datatypes {
 
   public final class ExerciseSegment {
     method @NonNull public java.time.Instant getEndTime();
+    method @FloatRange(from=0, to=10, fromInclusive=true, toInclusive=true) public float getRateOfPerceivedExertion();
     method @IntRange(from=0) public int getRepetitionsCount();
     method public int getSegmentType();
+    method @IntRange(from=0) public int getSetIndex();
     method @NonNull public java.time.Instant getStartTime();
+    method @Nullable public android.health.connect.datatypes.units.Mass getWeight();
+    method public boolean hasRateOfPerceivedExertion();
+    method public boolean hasSetIndex();
   }
 
   public static final class ExerciseSegment.Builder {
     ctor public ExerciseSegment.Builder(@NonNull java.time.Instant, @NonNull java.time.Instant, int);
     method @NonNull public android.health.connect.datatypes.ExerciseSegment build();
+    method @NonNull public android.health.connect.datatypes.ExerciseSegment.Builder clearRateOfPerceivedExertion();
+    method @NonNull public android.health.connect.datatypes.ExerciseSegment.Builder clearSetIndex();
+    method @NonNull public android.health.connect.datatypes.ExerciseSegment.Builder clearWeight();
+    method @NonNull public android.health.connect.datatypes.ExerciseSegment.Builder setRateOfPerceivedExertion(@FloatRange(from=0, to=10, fromInclusive=true, toInclusive=true) float);
     method @NonNull public android.health.connect.datatypes.ExerciseSegment.Builder setRepetitionsCount(@IntRange(from=0) int);
+    method @NonNull public android.health.connect.datatypes.ExerciseSegment.Builder setSetIndex(@IntRange(from=0) int);
+    method @NonNull public android.health.connect.datatypes.ExerciseSegment.Builder setWeight(@NonNull android.health.connect.datatypes.units.Mass);
   }
 
   public final class ExerciseSegmentType {
@@ -965,9 +997,11 @@ package android.health.connect.datatypes {
     method @NonNull public java.util.List<android.health.connect.datatypes.ExerciseLap> getLaps();
     method @Nullable public CharSequence getNotes();
     method @Nullable public String getPlannedExerciseSessionId();
+    method @FloatRange(from=0, to=10, fromInclusive=true, toInclusive=true) public float getRateOfPerceivedExertion();
     method @Nullable public android.health.connect.datatypes.ExerciseRoute getRoute();
     method @NonNull public java.util.List<android.health.connect.datatypes.ExerciseSegment> getSegments();
     method @Nullable public CharSequence getTitle();
+    method public boolean hasRateOfPerceivedExertion();
     method @NonNull public boolean hasRoute();
     field @NonNull public static final android.health.connect.datatypes.AggregationType<java.lang.Long> EXERCISE_DURATION_TOTAL;
   }
@@ -976,11 +1010,13 @@ package android.health.connect.datatypes {
     ctor public ExerciseSessionRecord.Builder(@NonNull android.health.connect.datatypes.Metadata, @NonNull java.time.Instant, @NonNull java.time.Instant, int);
     method @NonNull public android.health.connect.datatypes.ExerciseSessionRecord build();
     method @NonNull public android.health.connect.datatypes.ExerciseSessionRecord.Builder clearEndZoneOffset();
+    method @NonNull public android.health.connect.datatypes.ExerciseSessionRecord.Builder clearRateOfPerceivedExertion();
     method @NonNull public android.health.connect.datatypes.ExerciseSessionRecord.Builder clearStartZoneOffset();
     method @NonNull public android.health.connect.datatypes.ExerciseSessionRecord.Builder setEndZoneOffset(@NonNull java.time.ZoneOffset);
     method @NonNull public android.health.connect.datatypes.ExerciseSessionRecord.Builder setLaps(@NonNull java.util.List<android.health.connect.datatypes.ExerciseLap>);
     method @NonNull public android.health.connect.datatypes.ExerciseSessionRecord.Builder setNotes(@Nullable CharSequence);
     method @NonNull public android.health.connect.datatypes.ExerciseSessionRecord.Builder setPlannedExerciseSessionId(@Nullable String);
+    method @NonNull public android.health.connect.datatypes.ExerciseSessionRecord.Builder setRateOfPerceivedExertion(@FloatRange(from=0, to=10, fromInclusive=true, toInclusive=true) float);
     method @NonNull public android.health.connect.datatypes.ExerciseSessionRecord.Builder setRoute(@Nullable android.health.connect.datatypes.ExerciseRoute);
     method @NonNull public android.health.connect.datatypes.ExerciseSessionRecord.Builder setSegments(@NonNull java.util.List<android.health.connect.datatypes.ExerciseSegment>);
     method @NonNull public android.health.connect.datatypes.ExerciseSessionRecord.Builder setStartZoneOffset(@NonNull java.time.ZoneOffset);
