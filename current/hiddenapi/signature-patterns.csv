@@ -5,6 +5,7 @@ android/health/connect/AggregateRecordsRequest
 android/health/connect/AggregateRecordsResponse
 android/health/connect/AggregateResult
 android/health/connect/ApplicationInfoResponse
+android/health/connect/CanConnectMatchingAppsRequest
 android/health/connect/Constants
 android/health/connect/CreateMedicalDataSourceRequest
 android/health/connect/DeleteMedicalResourcesRequest
@@ -55,6 +56,7 @@ android/health/connect/aidl/IAccessLogsResponseCallback
 android/health/connect/aidl/IActivityDatesResponseCallback
 android/health/connect/aidl/IAggregateRecordsResponseCallback
 android/health/connect/aidl/IApplicationInfoResponseCallback
+android/health/connect/aidl/ICanConnectMatchingAppsCallback
 android/health/connect/aidl/ICanRestoreResponseCallback
 android/health/connect/aidl/IChangeLogsResponseCallback
 android/health/connect/aidl/IDataStagingFinishedCallback
