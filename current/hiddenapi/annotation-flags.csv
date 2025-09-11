@@ -21,9 +21,11 @@ Lcom/android/healthfitness/flags/CustomFeatureFlags;->exportImportFastFollow()Z,
 Lcom/android/healthfitness/flags/CustomFeatureFlags;->exportImportNiceToHave()Z,unsupported
 Lcom/android/healthfitness/flags/CustomFeatureFlags;->expressiveThemingEnabled()Z,unsupported
 Lcom/android/healthfitness/flags/CustomFeatureFlags;->extendExportImportTelemetry()Z,unsupported
+Lcom/android/healthfitness/flags/CustomFeatureFlags;->healthAppCache()Z,unsupported
 Lcom/android/healthfitness/flags/CustomFeatureFlags;->healthConnectMappings()Z,unsupported
 Lcom/android/healthfitness/flags/CustomFeatureFlags;->healthConnectMappingsFollowUp()Z,unsupported
 Lcom/android/healthfitness/flags/CustomFeatureFlags;->immediateExport()Z,unsupported
+Lcom/android/healthfitness/flags/CustomFeatureFlags;->latencyMetricsFlag()Z,unsupported
 Lcom/android/healthfitness/flags/CustomFeatureFlags;->launchOnboardingActivity()Z,unsupported
 Lcom/android/healthfitness/flags/CustomFeatureFlags;->logcatCensorIae()Z,unsupported
 Lcom/android/healthfitness/flags/CustomFeatureFlags;->matchmaking()Z,unsupported
@@ -31,6 +33,7 @@ Lcom/android/healthfitness/flags/CustomFeatureFlags;->matchmakingCounter()Z,unsu
 Lcom/android/healthfitness/flags/CustomFeatureFlags;->matchmakingOptOut()Z,unsupported
 Lcom/android/healthfitness/flags/CustomFeatureFlags;->matchmakingUi()Z,unsupported
 Lcom/android/healthfitness/flags/CustomFeatureFlags;->mindfulness()Z,unsupported
+Lcom/android/healthfitness/flags/CustomFeatureFlags;->mindfulnessAggregation()Z,unsupported
 Lcom/android/healthfitness/flags/CustomFeatureFlags;->newDeviceTypes()Z,unsupported
 Lcom/android/healthfitness/flags/CustomFeatureFlags;->newInformationArchitecture()Z,unsupported
 Lcom/android/healthfitness/flags/CustomFeatureFlags;->onboarding()Z,unsupported
@@ -83,9 +86,11 @@ Lcom/android/healthfitness/flags/FeatureFlags;->exportImportFastFollow()Z,unsupp
 Lcom/android/healthfitness/flags/FeatureFlags;->exportImportNiceToHave()Z,unsupported
 Lcom/android/healthfitness/flags/FeatureFlags;->expressiveThemingEnabled()Z,unsupported
 Lcom/android/healthfitness/flags/FeatureFlags;->extendExportImportTelemetry()Z,unsupported
+Lcom/android/healthfitness/flags/FeatureFlags;->healthAppCache()Z,unsupported
 Lcom/android/healthfitness/flags/FeatureFlags;->healthConnectMappings()Z,unsupported
 Lcom/android/healthfitness/flags/FeatureFlags;->healthConnectMappingsFollowUp()Z,unsupported
 Lcom/android/healthfitness/flags/FeatureFlags;->immediateExport()Z,unsupported
+Lcom/android/healthfitness/flags/FeatureFlags;->latencyMetricsFlag()Z,unsupported
 Lcom/android/healthfitness/flags/FeatureFlags;->launchOnboardingActivity()Z,unsupported
 Lcom/android/healthfitness/flags/FeatureFlags;->logcatCensorIae()Z,unsupported
 Lcom/android/healthfitness/flags/FeatureFlags;->matchmaking()Z,unsupported
@@ -93,6 +98,7 @@ Lcom/android/healthfitness/flags/FeatureFlags;->matchmakingCounter()Z,unsupporte
 Lcom/android/healthfitness/flags/FeatureFlags;->matchmakingOptOut()Z,unsupported
 Lcom/android/healthfitness/flags/FeatureFlags;->matchmakingUi()Z,unsupported
 Lcom/android/healthfitness/flags/FeatureFlags;->mindfulness()Z,unsupported
+Lcom/android/healthfitness/flags/FeatureFlags;->mindfulnessAggregation()Z,unsupported
 Lcom/android/healthfitness/flags/FeatureFlags;->newDeviceTypes()Z,unsupported
 Lcom/android/healthfitness/flags/FeatureFlags;->newInformationArchitecture()Z,unsupported
 Lcom/android/healthfitness/flags/FeatureFlags;->onboarding()Z,unsupported
@@ -145,9 +151,11 @@ Lcom/android/healthfitness/flags/FeatureFlagsImpl;->exportImportFastFollow()Z,un
 Lcom/android/healthfitness/flags/FeatureFlagsImpl;->exportImportNiceToHave()Z,unsupported
 Lcom/android/healthfitness/flags/FeatureFlagsImpl;->expressiveThemingEnabled()Z,unsupported
 Lcom/android/healthfitness/flags/FeatureFlagsImpl;->extendExportImportTelemetry()Z,unsupported
+Lcom/android/healthfitness/flags/FeatureFlagsImpl;->healthAppCache()Z,unsupported
 Lcom/android/healthfitness/flags/FeatureFlagsImpl;->healthConnectMappings()Z,unsupported
 Lcom/android/healthfitness/flags/FeatureFlagsImpl;->healthConnectMappingsFollowUp()Z,unsupported
 Lcom/android/healthfitness/flags/FeatureFlagsImpl;->immediateExport()Z,unsupported
+Lcom/android/healthfitness/flags/FeatureFlagsImpl;->latencyMetricsFlag()Z,unsupported
 Lcom/android/healthfitness/flags/FeatureFlagsImpl;->launchOnboardingActivity()Z,unsupported
 Lcom/android/healthfitness/flags/FeatureFlagsImpl;->logcatCensorIae()Z,unsupported
 Lcom/android/healthfitness/flags/FeatureFlagsImpl;->matchmaking()Z,unsupported
@@ -155,6 +163,7 @@ Lcom/android/healthfitness/flags/FeatureFlagsImpl;->matchmakingCounter()Z,unsupp
 Lcom/android/healthfitness/flags/FeatureFlagsImpl;->matchmakingOptOut()Z,unsupported
 Lcom/android/healthfitness/flags/FeatureFlagsImpl;->matchmakingUi()Z,unsupported
 Lcom/android/healthfitness/flags/FeatureFlagsImpl;->mindfulness()Z,unsupported
+Lcom/android/healthfitness/flags/FeatureFlagsImpl;->mindfulnessAggregation()Z,unsupported
 Lcom/android/healthfitness/flags/FeatureFlagsImpl;->newDeviceTypes()Z,unsupported
 Lcom/android/healthfitness/flags/FeatureFlagsImpl;->newInformationArchitecture()Z,unsupported
 Lcom/android/healthfitness/flags/FeatureFlagsImpl;->onboarding()Z,unsupported
@@ -207,9 +216,11 @@ Lcom/android/healthfitness/flags/Flags;->exportImportFastFollow()Z,unsupported
 Lcom/android/healthfitness/flags/Flags;->exportImportNiceToHave()Z,unsupported
 Lcom/android/healthfitness/flags/Flags;->expressiveThemingEnabled()Z,unsupported
 Lcom/android/healthfitness/flags/Flags;->extendExportImportTelemetry()Z,unsupported
+Lcom/android/healthfitness/flags/Flags;->healthAppCache()Z,unsupported
 Lcom/android/healthfitness/flags/Flags;->healthConnectMappings()Z,unsupported
 Lcom/android/healthfitness/flags/Flags;->healthConnectMappingsFollowUp()Z,unsupported
 Lcom/android/healthfitness/flags/Flags;->immediateExport()Z,unsupported
+Lcom/android/healthfitness/flags/Flags;->latencyMetricsFlag()Z,unsupported
 Lcom/android/healthfitness/flags/Flags;->launchOnboardingActivity()Z,unsupported
 Lcom/android/healthfitness/flags/Flags;->logcatCensorIae()Z,unsupported
 Lcom/android/healthfitness/flags/Flags;->matchmaking()Z,unsupported
@@ -217,6 +228,7 @@ Lcom/android/healthfitness/flags/Flags;->matchmakingCounter()Z,unsupported
 Lcom/android/healthfitness/flags/Flags;->matchmakingOptOut()Z,unsupported
 Lcom/android/healthfitness/flags/Flags;->matchmakingUi()Z,unsupported
 Lcom/android/healthfitness/flags/Flags;->mindfulness()Z,unsupported
+Lcom/android/healthfitness/flags/Flags;->mindfulnessAggregation()Z,unsupported
 Lcom/android/healthfitness/flags/Flags;->newDeviceTypes()Z,unsupported
 Lcom/android/healthfitness/flags/Flags;->newInformationArchitecture()Z,unsupported
 Lcom/android/healthfitness/flags/Flags;->onboarding()Z,unsupported
