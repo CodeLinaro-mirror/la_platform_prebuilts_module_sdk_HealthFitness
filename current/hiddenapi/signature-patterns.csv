@@ -167,6 +167,7 @@ android/health/connect/datatypes/SleepSessionRecord
 android/health/connect/datatypes/SpeedRecord
 android/health/connect/datatypes/StepsCadenceRecord
 android/health/connect/datatypes/StepsRecord
+android/health/connect/datatypes/SymptomRecord
 android/health/connect/datatypes/TimeInterval
 android/health/connect/datatypes/TotalCaloriesBurnedRecord
 android/health/connect/datatypes/Vo2MaxRecord
@@ -245,6 +246,7 @@ android/health/connect/internal/datatypes/SleepStageInternal
 android/health/connect/internal/datatypes/SpeedRecordInternal
 android/health/connect/internal/datatypes/StepsCadenceRecordInternal
 android/health/connect/internal/datatypes/StepsRecordInternal
+android/health/connect/internal/datatypes/SymptomRecordInternal
 android/health/connect/internal/datatypes/TotalCaloriesBurnedRecordInternal
 android/health/connect/internal/datatypes/Vo2MaxRecordInternal
 android/health/connect/internal/datatypes/WeightRecordInternal
