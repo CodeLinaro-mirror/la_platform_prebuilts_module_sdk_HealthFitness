@@ -5,13 +5,12 @@ android/health/connect/AggregateRecordsRequest
 android/health/connect/AggregateRecordsResponse
 android/health/connect/AggregateResult
 android/health/connect/ApplicationInfoResponse
+android/health/connect/CanConnectMatchingAppsRequest
 android/health/connect/Constants
 android/health/connect/CreateMedicalDataSourceRequest
 android/health/connect/DeleteMedicalResourcesRequest
 android/health/connect/DeleteUsingFiltersRequest
 android/health/connect/FetchDataOriginsPriorityOrderResponse
-android/health/connect/GetMatchingAppsRequest
-android/health/connect/GetMatchingAppsResponse
 android/health/connect/GetMedicalDataSourcesRequest
 android/health/connect/HealthApiVersion
 android/health/connect/HealthConnectDataState
@@ -68,7 +67,6 @@ android/health/connect/aidl/IGetHealthConnectDataStateCallback
 android/health/connect/aidl/IGetHealthConnectMigrationUiStateCallback
 android/health/connect/aidl/IGetHealthConnectOnboardingStateCallback
 android/health/connect/aidl/IGetLatestMetadataForBackupResponseCallback
-android/health/connect/aidl/IGetMatchingAppsCallback
 android/health/connect/aidl/IGetPriorityResponseCallback
 android/health/connect/aidl/IHealthConnectService
 android/health/connect/aidl/IInsertRecordsResponseCallback
@@ -95,9 +93,6 @@ android/health/connect/backuprestore/BackupMetadata
 android/health/connect/backuprestore/GetChangesForBackupResponse
 android/health/connect/backuprestore/GetLatestMetadataForBackupResponse
 android/health/connect/backuprestore/RestoreChange
-android/health/connect/backuprestore/UpdateBackupAndRestoreSettingsRequest
-android/health/connect/backuprestore/UpdateHealthConnectBackupStatusRequest
-android/health/connect/backuprestore/UpdateHealthConnectRestoreStatusRequest
 android/health/connect/changelog/ChangeLogTokenRequest
 android/health/connect/changelog/ChangeLogTokenResponse
 android/health/connect/changelog/ChangeLogsRequest
@@ -167,7 +162,6 @@ android/health/connect/datatypes/SleepSessionRecord
 android/health/connect/datatypes/SpeedRecord
 android/health/connect/datatypes/StepsCadenceRecord
 android/health/connect/datatypes/StepsRecord
-android/health/connect/datatypes/SymptomRecord
 android/health/connect/datatypes/TimeInterval
 android/health/connect/datatypes/TotalCaloriesBurnedRecord
 android/health/connect/datatypes/Vo2MaxRecord
@@ -246,7 +240,6 @@ android/health/connect/internal/datatypes/SleepStageInternal
 android/health/connect/internal/datatypes/SpeedRecordInternal
 android/health/connect/internal/datatypes/StepsCadenceRecordInternal
 android/health/connect/internal/datatypes/StepsRecordInternal
-android/health/connect/internal/datatypes/SymptomRecordInternal
 android/health/connect/internal/datatypes/TotalCaloriesBurnedRecordInternal
 android/health/connect/internal/datatypes/Vo2MaxRecordInternal
 android/health/connect/internal/datatypes/WeightRecordInternal
