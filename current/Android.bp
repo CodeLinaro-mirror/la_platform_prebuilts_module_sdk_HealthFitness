@@ -38,15 +38,14 @@ prebuilt_bootclasspath_fragment {
 
 java_sdk_library_import {
     name: "framework-healthfitness",
-    // Do not prefer prebuilt if the Soong config variable "source_build" in namespace "healthfitness_module" is true.
-    use_source_config_var: {
-        config_namespace: "healthfitness_module",
-        var_name: "source_build",
-    },
     visibility: ["//visibility:public"],
     apex_available: ["com.android.healthfitness"],
     licenses: ["healthfitness-module-sdk_Android-Apache-2.0"],
     shared_library: false,
+    permitted_packages: [
+        "android.health",
+        "com.android.healthfitness.flags",
+    ],
     public: {
         jars: ["sdk_library/public/framework-healthfitness-stubs.jar"],
         stub_srcs: ["sdk_library/public/framework-healthfitness.srcjar"],
@@ -75,15 +74,14 @@ java_sdk_library_import {
 
 java_sdk_library_import {
     name: "service-healthfitness",
-    // Do not prefer prebuilt if the Soong config variable "source_build" in namespace "healthfitness_module" is true.
-    use_source_config_var: {
-        config_namespace: "healthfitness_module",
-        var_name: "source_build",
-    },
     visibility: ["//visibility:public"],
     apex_available: ["com.android.healthfitness"],
     licenses: ["healthfitness-module-sdk_Android-Apache-2.0"],
     shared_library: false,
+    permitted_packages: [
+        "com.android.server.healthconnect",
+        "com.android.healthfitness.flags",
+    ],
     public: {
         jars: ["sdk_library/public/service-healthfitness-stubs.jar"],
         stub_srcs: ["sdk_library/public/service-healthfitness.srcjar"],
@@ -107,6 +105,12 @@ license {
     visibility: ["//visibility:private"],
     license_kinds: ["SPDX-license-identifier-Apache-2.0"],
     license_text: ["licenses/build/soong/licenses/LICENSE"],
+}
+
+license {
+    name: "healthfitness-module-sdk_opensourcerequest",
+    visibility: ["//visibility:private"],
+    license_text: ["licenses/build/soong/licenses/opensourcerequest"],
 }
 
 prebuilt_systemserverclasspath_fragment {
