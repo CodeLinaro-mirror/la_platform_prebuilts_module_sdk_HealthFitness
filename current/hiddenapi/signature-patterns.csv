@@ -9,8 +9,11 @@ android/health/connect/Constants
 android/health/connect/CreateMedicalDataSourceRequest
 android/health/connect/DeleteMedicalResourcesRequest
 android/health/connect/DeleteUsingFiltersRequest
+android/health/connect/DeviceDataProviderInfo
+android/health/connect/DeviceDataSourceCapabilities
+android/health/connect/DeviceDataSourceInfo
 android/health/connect/FetchDataOriginsPriorityOrderResponse
-android/health/connect/GetMatchingAppsResponse
+android/health/connect/GetMatchingDataSourcesResponse
 android/health/connect/GetMedicalDataSourcesRequest
 android/health/connect/HealthApiVersion
 android/health/connect/HealthConnectDataState
@@ -52,6 +55,7 @@ android/health/connect/aidl/ApplicationInfoResponseParcel
 android/health/connect/aidl/DeleteUsingFiltersRequestParcel
 android/health/connect/aidl/DeletedLogsParcel
 android/health/connect/aidl/DeletedMedicalResourcesParcel
+android/health/connect/aidl/DeviceDataSourceCapabilities
 android/health/connect/aidl/GetPriorityResponseParcel
 android/health/connect/aidl/HealthConnectExceptionParcel
 android/health/connect/aidl/IAccessLogsResponseCallback
@@ -61,14 +65,16 @@ android/health/connect/aidl/IApplicationInfoResponseCallback
 android/health/connect/aidl/ICanRestoreResponseCallback
 android/health/connect/aidl/IChangeLogsResponseCallback
 android/health/connect/aidl/IDataStagingFinishedCallback
+android/health/connect/aidl/IDeviceDataSourceCapabilitiesCallback
 android/health/connect/aidl/IEmptyResponseCallback
 android/health/connect/aidl/IGetChangeLogTokenCallback
 android/health/connect/aidl/IGetChangesForBackupResponseCallback
+android/health/connect/aidl/IGetDeviceDataSourceInfosCallback
 android/health/connect/aidl/IGetHealthConnectDataStateCallback
 android/health/connect/aidl/IGetHealthConnectMigrationUiStateCallback
 android/health/connect/aidl/IGetHealthConnectOnboardingStateCallback
 android/health/connect/aidl/IGetLatestMetadataForBackupResponseCallback
-android/health/connect/aidl/IGetMatchingAppsCallback
+android/health/connect/aidl/IGetMatchingDataSourcesCallback
 android/health/connect/aidl/IGetPriorityResponseCallback
 android/health/connect/aidl/IHealthConnectService
 android/health/connect/aidl/IInsertRecordsResponseCallback
@@ -118,7 +124,6 @@ android/health/connect/datatypes/BodyTemperatureRecord
 android/health/connect/datatypes/BodyWaterMassRecord
 android/health/connect/datatypes/BoneMassRecord
 android/health/connect/datatypes/CervicalMucusRecord
-android/health/connect/datatypes/CyclePhasesRecord
 android/health/connect/datatypes/CyclingPedalingCadenceRecord
 android/health/connect/datatypes/DataOrigin
 android/health/connect/datatypes/Device
@@ -147,6 +152,7 @@ android/health/connect/datatypes/LeanBodyMassRecord
 android/health/connect/datatypes/MealType
 android/health/connect/datatypes/MedicalDataSource
 android/health/connect/datatypes/MedicalResource
+android/health/connect/datatypes/MenstrualCyclePhaseRecord
 android/health/connect/datatypes/MenstruationFlowRecord
 android/health/connect/datatypes/MenstruationPeriodRecord
 android/health/connect/datatypes/Metadata
@@ -215,7 +221,6 @@ android/health/connect/internal/datatypes/BodyTemperatureRecordInternal
 android/health/connect/internal/datatypes/BodyWaterMassRecordInternal
 android/health/connect/internal/datatypes/BoneMassRecordInternal
 android/health/connect/internal/datatypes/CervicalMucusRecordInternal
-android/health/connect/internal/datatypes/CyclePhasesRecordInternal
 android/health/connect/internal/datatypes/CyclingPedalingCadenceRecordInternal
 android/health/connect/internal/datatypes/DistanceRecordInternal
 android/health/connect/internal/datatypes/ElevationGainedRecordInternal
@@ -234,6 +239,7 @@ android/health/connect/internal/datatypes/InstantRecordInternal
 android/health/connect/internal/datatypes/IntermenstrualBleedingRecordInternal
 android/health/connect/internal/datatypes/IntervalRecordInternal
 android/health/connect/internal/datatypes/LeanBodyMassRecordInternal
+android/health/connect/internal/datatypes/MenstrualCyclePhaseRecordInternal
 android/health/connect/internal/datatypes/MenstruationFlowRecordInternal
 android/health/connect/internal/datatypes/MenstruationPeriodRecordInternal
 android/health/connect/internal/datatypes/MindfulnessSessionRecordInternal
@@ -270,7 +276,6 @@ android/health/connect/internal/datatypes/utils/HealthConnectMappings
 android/health/connect/internal/datatypes/utils/InternalExternalRecordConverter
 android/health/connect/internal/datatypes/utils/MedicalResourceTypePermissionMapper
 android/health/connect/internal/datatypes/utils/ParcelRecordConverter
-android/health/connect/internal/datatypes/utils/RecordTypeRecordCategoryMapper
 android/health/connect/internal/datatypes/utils/SymptomTypePermissionMapper
 android/health/connect/migration/AppInfoMigrationPayload
 android/health/connect/migration/HealthConnectMigrationUiState
