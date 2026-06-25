@@ -10,9 +10,12 @@ android/health/connect/CreateMedicalDataSourceRequest
 android/health/connect/DeleteMedicalResourcesRequest
 android/health/connect/DeleteUsingFiltersRequest
 android/health/connect/DeviceDataProviderInfo
+android/health/connect/DeviceDataSource
 android/health/connect/DeviceDataSourceCapabilities
 android/health/connect/DeviceDataSourceInfo
+android/health/connect/DeviceDataTypeSource
 android/health/connect/FetchDataOriginsPriorityOrderResponse
+android/health/connect/GetDeviceDataSourcesResponse
 android/health/connect/GetMatchingDataSourcesResponse
 android/health/connect/GetMedicalDataSourcesRequest
 android/health/connect/HealthApiVersion
@@ -69,7 +72,9 @@ android/health/connect/aidl/IDeviceDataSourceCapabilitiesCallback
 android/health/connect/aidl/IEmptyResponseCallback
 android/health/connect/aidl/IGetChangeLogTokenCallback
 android/health/connect/aidl/IGetChangesForBackupResponseCallback
+android/health/connect/aidl/IGetCurrentDeviceDataSourceCallback
 android/health/connect/aidl/IGetDeviceDataSourceInfosCallback
+android/health/connect/aidl/IGetDeviceDataSourcesCallback
 android/health/connect/aidl/IGetHealthConnectDataStateCallback
 android/health/connect/aidl/IGetHealthConnectMigrationUiStateCallback
 android/health/connect/aidl/IGetHealthConnectOnboardingStateCallback
@@ -167,6 +172,7 @@ android/health/connect/datatypes/PlannedExerciseStep
 android/health/connect/datatypes/PowerRecord
 android/health/connect/datatypes/Record
 android/health/connect/datatypes/RecordTypeIdentifier
+android/health/connect/datatypes/RecordTypeSensitivity
 android/health/connect/datatypes/RecordUtils
 android/health/connect/datatypes/RespiratoryRateRecord
 android/health/connect/datatypes/RestingHeartRateRecord
@@ -198,6 +204,7 @@ android/health/connect/datatypes/validation/ValidationUtils
 android/health/connect/device/DeviceDataAdvertisement
 android/health/connect/device/DeviceDataTypeAdvertisement
 android/health/connect/device/DeviceParcel
+android/health/connect/device/SyntheticPackageNameMatcher
 android/health/connect/exportimport/ExportImportDocumentProvider
 android/health/connect/exportimport/IImportStatusCallback
 android/health/connect/exportimport/IQueryDocumentProvidersCallback
@@ -294,12 +301,8 @@ android/health/connect/restore/BackupFileNamesSet
 android/health/connect/restore/StageRemoteDataException
 android/health/connect/restore/StageRemoteDataRequest
 com/android/healthfitness/flags/AconfigFlagHelper
-com/android/healthfitness/flags/CustomFeatureFlags
 com/android/healthfitness/flags/DatabaseVersionSupplier
 com/android/healthfitness/flags/DatabaseVersions
-com/android/healthfitness/flags/FakeFeatureFlagsImpl
-com/android/healthfitness/flags/FeatureFlags
-com/android/healthfitness/flags/FeatureFlagsImpl
 com/android/healthfitness/flags/Flags
 com/android/healthfitness/jarjar/modules/utils/build/SdkLevel
 com/android/healthfitness/jarjar/modules/utils/build/UnboundedSdkLevel
