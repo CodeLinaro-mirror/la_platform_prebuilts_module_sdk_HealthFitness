@@ -300,6 +300,7 @@ package android.health.connect {
     field public static final String WRITE_BODY_WATER_MASS = "android.permission.health.WRITE_BODY_WATER_MASS";
     field public static final String WRITE_BONE_MASS = "android.permission.health.WRITE_BONE_MASS";
     field public static final String WRITE_CERVICAL_MUCUS = "android.permission.health.WRITE_CERVICAL_MUCUS";
+    field public static final String WRITE_DEVICE_UDI = "android.permission.health.WRITE_DEVICE_UDI";
     field public static final String WRITE_DISTANCE = "android.permission.health.WRITE_DISTANCE";
     field public static final String WRITE_ELEVATION_GAINED = "android.permission.health.WRITE_ELEVATION_GAINED";
     field public static final String WRITE_EXERCISE = "android.permission.health.WRITE_EXERCISE";
@@ -465,7 +466,7 @@ package android.health.connect {
     method @NonNull public android.health.connect.ReadMedicalResourcesInitialRequest build();
     method @NonNull public android.health.connect.ReadMedicalResourcesInitialRequest.Builder clearDataSourceIds();
     method @NonNull public android.health.connect.ReadMedicalResourcesInitialRequest.Builder setMedicalResourceType(int);
-    method @NonNull public android.health.connect.ReadMedicalResourcesInitialRequest.Builder setPageSize(@IntRange(from=android.health.connect.Constants.MINIMUM_PAGE_SIZE, to=android.health.connect.Constants.MAXIMUM_PAGE_SIZE) int);
+    method @NonNull public android.health.connect.ReadMedicalResourcesInitialRequest.Builder setPageSize(@IntRange(from=0x1, to=0x1388) int);
   }
 
   public final class ReadMedicalResourcesPageRequest extends android.health.connect.ReadMedicalResourcesRequest {
@@ -477,12 +478,12 @@ package android.health.connect {
     ctor public ReadMedicalResourcesPageRequest.Builder(@NonNull android.health.connect.ReadMedicalResourcesPageRequest.Builder);
     ctor public ReadMedicalResourcesPageRequest.Builder(@NonNull android.health.connect.ReadMedicalResourcesPageRequest);
     method @NonNull public android.health.connect.ReadMedicalResourcesPageRequest build();
-    method @NonNull public android.health.connect.ReadMedicalResourcesPageRequest.Builder setPageSize(@IntRange(from=android.health.connect.Constants.MINIMUM_PAGE_SIZE, to=android.health.connect.Constants.MAXIMUM_PAGE_SIZE) int);
+    method @NonNull public android.health.connect.ReadMedicalResourcesPageRequest.Builder setPageSize(@IntRange(from=0x1, to=0x1388) int);
     method @NonNull public android.health.connect.ReadMedicalResourcesPageRequest.Builder setPageToken(@NonNull String);
   }
 
   public abstract class ReadMedicalResourcesRequest {
-    method @IntRange(from=android.health.connect.Constants.MINIMUM_PAGE_SIZE, to=android.health.connect.Constants.MAXIMUM_PAGE_SIZE) public int getPageSize();
+    method @IntRange(from=0x1, to=0x1388) public int getPageSize();
   }
 
   public final class ReadMedicalResourcesResponse implements android.os.Parcelable {
@@ -708,9 +709,9 @@ package android.health.connect.datatypes {
     field public static final int ALCOHOL_CONSUMPTION_BEVERAGE_TYPE_VODKA = 3; // 0x3
     field public static final int ALCOHOL_CONSUMPTION_BEVERAGE_TYPE_WHISKEY = 5; // 0x5
     field public static final int ALCOHOL_CONSUMPTION_BEVERAGE_TYPE_WINE = 2; // 0x2
-    field public static final int RECORD_TEMPORAL_TYPE_INSTANT = 0; // 0x0
-    field public static final int RECORD_TEMPORAL_TYPE_INTERVAL = 1; // 0x1
-    field public static final int RECORD_TEMPORAL_TYPE_LOCAL_DATE = 2; // 0x2
+    field @Deprecated public static final int RECORD_TEMPORAL_TYPE_INSTANT = 0; // 0x0
+    field @Deprecated public static final int RECORD_TEMPORAL_TYPE_INTERVAL = 1; // 0x1
+    field @Deprecated public static final int RECORD_TEMPORAL_TYPE_LOCAL_DATE = 2; // 0x2
   }
 
   public static final class AlcoholConsumptionRecord.Builder {
@@ -951,6 +952,7 @@ package android.health.connect.datatypes {
     method @Nullable public String getManufacturer();
     method @Nullable public String getModel();
     method public int getType();
+    method @Nullable public String getUdi();
     field public static final int DEVICE_TYPE_CHEST_STRAP = 7; // 0x7
     field public static final int DEVICE_TYPE_CONSUMER_MEDICAL_DEVICE = 9; // 0x9
     field public static final int DEVICE_TYPE_FITNESS_BAND = 6; // 0x6
@@ -976,6 +978,7 @@ package android.health.connect.datatypes {
     method @NonNull public android.health.connect.datatypes.Device.Builder setManufacturer(@Nullable String);
     method @NonNull public android.health.connect.datatypes.Device.Builder setModel(@Nullable String);
     method @NonNull public android.health.connect.datatypes.Device.Builder setType(int);
+    method @NonNull public android.health.connect.datatypes.Device.Builder setUdi(@Nullable String);
   }
 
   public final class DistanceRecord extends android.health.connect.datatypes.IntervalRecord {
@@ -1913,6 +1916,9 @@ package android.health.connect.datatypes {
 
   public abstract class Record {
     method @NonNull public android.health.connect.datatypes.Metadata getMetadata();
+    field public static final int RECORD_TEMPORAL_TYPE_INSTANT = 0; // 0x0
+    field public static final int RECORD_TEMPORAL_TYPE_INTERVAL = 1; // 0x1
+    field public static final int RECORD_TEMPORAL_TYPE_LOCAL_DATE = 2; // 0x2
   }
 
   public final class RespiratoryRateRecord extends android.health.connect.datatypes.InstantRecord {
@@ -2090,9 +2096,9 @@ package android.health.connect.datatypes {
     method public int getSeverity();
     method public int getSymptomType();
     method public int getTemporalType();
-    field public static final int RECORD_TEMPORAL_TYPE_INSTANT = 0; // 0x0
-    field public static final int RECORD_TEMPORAL_TYPE_INTERVAL = 1; // 0x1
-    field public static final int RECORD_TEMPORAL_TYPE_LOCAL_DATE = 2; // 0x2
+    field @Deprecated public static final int RECORD_TEMPORAL_TYPE_INSTANT = 0; // 0x0
+    field @Deprecated public static final int RECORD_TEMPORAL_TYPE_INTERVAL = 1; // 0x1
+    field @Deprecated public static final int RECORD_TEMPORAL_TYPE_LOCAL_DATE = 2; // 0x2
     field public static final int SEVERITY_MILD = 1; // 0x1
     field public static final int SEVERITY_MODERATE = 2; // 0x2
     field public static final int SEVERITY_SEVERE = 3; // 0x3
