@@ -81,6 +81,8 @@ java_sdk_library_import {
     permitted_packages: [
         "com.android.server.healthconnect",
         "com.android.healthfitness.flags",
+        "com.android.healthfitness.beta",
+        "android.health.connect.common",
     ],
     public: {
         jars: ["sdk_library/public/service-healthfitness-stubs.jar"],
