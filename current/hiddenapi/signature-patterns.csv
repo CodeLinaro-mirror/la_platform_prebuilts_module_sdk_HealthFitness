@@ -19,6 +19,7 @@ android/health/connect/GetDeviceDataSourcesResponse
 android/health/connect/GetMatchingDataSourcesResponse
 android/health/connect/GetMedicalDataSourcesRequest
 android/health/connect/HealthApiVersion
+android/health/connect/HealthApp
 android/health/connect/HealthConnectDataState
 android/health/connect/HealthConnectException
 android/health/connect/HealthConnectManager
@@ -114,6 +115,9 @@ android/health/connect/changelog/ChangeLogTokenRequest
 android/health/connect/changelog/ChangeLogTokenResponse
 android/health/connect/changelog/ChangeLogsRequest
 android/health/connect/changelog/ChangeLogsResponse
+android/health/connect/common/DeviceUtils
+android/health/connect/common/DeviceUtilsImpl
+android/health/connect/common/PermissionUtils
 android/health/connect/datatypes/ActiveCaloriesBurnedRecord
 android/health/connect/datatypes/ActivityIntensityRecord
 android/health/connect/datatypes/AggregationType
@@ -300,6 +304,7 @@ android/health/connect/ratelimiter/RateLimiterException
 android/health/connect/restore/BackupFileNamesSet
 android/health/connect/restore/StageRemoteDataException
 android/health/connect/restore/StageRemoteDataRequest
+com/android/healthfitness/beta/Flags
 com/android/healthfitness/flags/AconfigFlagHelper
 com/android/healthfitness/flags/DatabaseVersionSupplier
 com/android/healthfitness/flags/DatabaseVersions
